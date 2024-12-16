@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #3953a4;
+    --secondary-color: #2a286b;
+    --accent-color: #059386;
+    --tertiary-color: #c0c0c0;
+    --light-color: #f4f4f4;
+    --dark-color: #151e15;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-original {
+    background-color: var(--primary-color) !important;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+body {
+    max-width: 2000px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.logo {
+    width: 150px;
+}
+
+/* Optional: Add an overlay for better text readability */
+.overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+}
+
+#high {
+    position: relative;
+    top: -70px;
+}
+
+.footer-link {
+    position: relative;
+    text-decoration: none; /* Remove the default underline */
+    font-weight: bold; /* Optional: make the font bold */
+}
+
+.background-cover {
+    background-image: url(/src/background.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjusts the position of the underline */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: var(--primary-color); /* Color of the underline */
+    transition: width 0.3s ease; /* Animation for the underline */
+}
+
+.footer-link:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+.footer {
+    background-color: var(--secondary-color);
+}
+
+.spacer {
+    display: block;
+    height: 65.8px;
+}
+
+.darkener {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.body {
+    position: relative;
+}
+
+p {
+    margin: 0px;
+}
+
+ol {
+    counter-reset: list-counter; /* Reset the counter */
+    list-style: none; /* Remove default numbering */
+    padding-left: 0; /* Remove default padding */
+}
+
+ol li {
+    counter-increment: list-counter; /* Increment the counter */
+    margin-bottom: 10px; /* Space between items */
+}
+
+ol li::before {
+    content: counter(list-counter) ". "; /* Use the counter as content */
+    font-weight: bold; /* Make the numbering bold */
+    color: var(--primary-color); /* Change the color of the numbering */
+}
+
+/*#region fade animation and other styles*/
+.fade {
+    opacity: 0;
+    animation: fade 2s ease forwards;
+}
+  
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeUp 2s ease forwards;
+}
+  
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: fadeDown 2s ease forwards;
+}
+  
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: fadeLeft 2s ease forwards;
+}
+  
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: fadeRight 2s ease forwards;
+}
+  
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes parallaxY {
+    to {
+        transform: translateY(calc(var(--speed) * 75px));
+    }
+}
+
+@keyframes parallaxX {
+    to {
+        transform: translateX(calc(var(--speed) * 75px));
+    }
+}
+
+/*#endregion */
+
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.accordion-button:hover {
+    background-color: #e2e6ea;
+    color: #0d6efd;
+}
+
+.accordion-item {
+    border: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .carousel-item h3 {
+    margin-bottom: 15px;
+  }
+
+  .carousel-item p,
+  .carousel-item ul {
+    font-size: 1.1rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #0d6efd;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  /* Custom nav-link styles */
+.custom-navlink {
+    position: relative;
+    text-decoration: none;
+    color: blue; /* Link color */
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-navlink:hover {
+    color: #007bff; /* Lighter blue on hover */
+  }
+  
+  /* Underline animation */
+  .custom-navlink::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%; /* Start off-screen (right) */
+    width: 0;
+    height: 2px;
+    background-color: blue; /* Same as link color */
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .custom-navlink:hover::after {
+    width: 100%; /* Full width underline */
+    left: 0; /* Move underline into view */
+  }
+
+
+  /* Enable dropdown on hover */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Smooth fade-in effect for dropdown */
+  .navbar-nav .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Styling for dropdown items */
+  .dropdown-item {
+    color: blue;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    color: #fff;
+    background-color: #007bff; /* Light blue */
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.8); /* Glow effect */
+  }
+  
+  

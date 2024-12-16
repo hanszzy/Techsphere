@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Document Metadata -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechSphere Innovations - Services</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicon and Styles -->
+    <link rel="icon" type="image/x-icon" href="src\icon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Page Title -->
+    <title>Services</title>
     <style>
         :root {
             --primary-blue: #3953A4;
@@ -54,21 +63,6 @@
             color: var(--white);
             padding: 2rem;
         }
-        .nav-link {
-            color: var(--primary-blue) !important;
-            font-weight: 500;
-        }
-        .nav-link.active {
-            color: var(--teal) !important;
-        }
-        .navbar {
-            background-color: var(--white) !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .navbar-brand {
-            color: var(--primary-blue) !important;
-            font-weight: 600;
-        }
         .services-subtitle {
             max-width: 700px;
             margin: 0 auto 3rem auto;
@@ -77,41 +71,58 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/Icon.png" alt="TechSphere Logo" class="me-2" style="height: 30px; width: auto;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <header>
+        <nav class="navbar fade-down fixed-top shadow navbar-expand-md navbar-light bg-white">
+            <div class="container-fluid px-sm-5">
+              <a class="navbar-brand" href="/"><img class="logo" alt="Logo" title="TechSphere Innovations" src="src/logo.svg"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contactus.html">Contact</a>
-                    </li>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link custom-navlink" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link custom-navlink" href="/aboutus.html">About Us</a>
+                  </li>
+                  <!-- Services Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link custom-navlink active" aria-current="page"
+                      href="/services.html"
+                    >
+                      Services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                      <li>
+                        <a class="dropdown-item" href="/ai.html">AI Solutions</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/cloud.html">Cloud Computing</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/iot.html">IoT Integrations</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link custom-navlink" href="/contactus.html">Contact Us</a>
+                  </li>
                 </ul>
+              </div>
             </div>
-        </div>
-    </nav>
-
-    
+        </nav>
+    </header>
     <section class="container my-5 py-5">
-        <h1 class="text-center display-4 mb-3 fw-bold text-primary-blue">Our Services</h1>
-        <p class="text-center services-subtitle">
-            At TechSphere Innovations, we offer a variety of tailored packages to fit your business's unique needs.
-        </p>
+        <section class="fade-up animate">
+            <h1 class="text-center display-4 mb-3 fw-bold text-primary-blue">Our Services</h1>
+            <p class="text-center services-subtitle">
+                At TechSphere Innovations, we offer a variety of tailored packages to fit your business's unique needs.
+            </p>
+        </section>
         
-        <div class="row g-4">
+        <div class="row fade-up animate g-4">
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="AI Solutions">
@@ -119,7 +130,7 @@
                         <h3 class="mb-3">AI Solutions</h3>
                         <p class="mb-4">Leverage the power of Artificial Intelligence to automate workflows, derive actionable insights, and drive business growth.</p>
                         <div class="mt-auto">
-                            <a href="Ai solutions.html" class="btn btn-tech w-100">See Plan</a>
+                            <a href="/ai.html" class="btn btn-tech w-100">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +142,7 @@
                         <h3 class="mb-3">Cloud Computing</h3>
                         <p class="mb-4">Optimize your operations with scalable, secure, and efficient cloud computing solutions tailored to your needs.</p>
                         <div class="mt-auto">
-                            <a href="Cloud Computing.html" class="btn btn-tech w-100">See Plan</a>
+                            <a href="/cloud.html" class="btn btn-tech w-100">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +154,7 @@
                         <h3 class="mb-3">IoT Integration</h3>
                         <p class="mb-4">Connect devices seamlessly and gather real-time data to enhance efficiency and improve decision-making processes.</p>
                         <div class="mt-auto">
-                            <a href="Iot integrations.html" class="btn btn-tech w-100">See Plan</a>
+                            <a href="/iot.html" class="btn btn-tech w-100">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -163,44 +174,88 @@
     </div>
     
     <!-- Content -->
-    <div class="container position-relative">
+    <div class="animate fade-left container position-relative">
         <div class="row justify-content-start py-4">
             <div class="col-lg-8">
                 <h2 class="display-5 text-white fw-bold mb-3">Discover the Future of Technology</h2>
                 <p class="fs-5 text-white mb-4">Transform your business with cutting-edge solutions and innovative technologies tailored to your success</p>
                 <div class="d-flex gap-3">
                     <a href="#" class="btn btn-light btn-md px-4">Explore</a>
-                    <a href="#" class="btn btn-outline-light btn-md px-4">Sign Up</a>
+                    <a href="/contactus.html" class="btn btn-outline-light btn-md px-4">Contact Us</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<footer class="bg-tech text-white py-4 mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 d-flex align-items-start">
-                <img src="images/Icon.png" alt="TechSphere Logo" class="me-2" style="width: 40px; height: 40px;">
-                <div>
-                    <h5 class="mb-1">TechSphere Innovations</h5>
-                   
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h5>Contact Us</h5>
-                <p>
-                    <i class="bi bi-envelope text-tech me-2"></i>Email: info@techsphere.com<br>
-                    <i class="bi bi-telephone text-tech me-2"></i>Phone: (123) 456-7890
-                </p>
-            </div>
-        </div>
-        <hr class="footer-divider">
-        <p class="text-center mb-0">&copy; 2024 TechSphere Innovations. All rights reserved.</p>
-    </div>
-</footer>
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="bg-white border-top border-primary py-5">
+    <section class="container">
+        <section class="row m-0 p-0 w-100">
+            <section class="col-sm-6">
+                <img class="logo mb-2" alt="Logo" title="Derive Travel and Tours" src="src/logo.svg">
+                <section>
+                    <section class="mb-2">
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-map-marker-alt"></i> Address:
+                        </p>
+                        <p class="ms-2 mb-0">#54 Francisco Building, Barangay Langkaan 1, <br> Dasmariñas City, Cavite, 4114</p>
+                    </section>
+                    
+                    <section class="mb-2">
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-envelope"></i> Email:
+                        </p>
+                        <p class="ms-2 mb-0">info@techsphere.com</p>
+                    </section>  
+                    
+                    <section class="mb-2">
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-phone-alt"></i> Telephone No.:
+                        </p>
+                        <p class="ms-2 mb-0">+63 954 299 6062</p>
+                    </section>
+                </section>                   
+            </section>
+            <section class="col-sm-6">
+                <h5 class="text-primary">Quick Links</h5>
+                <section class="row m-0 p-0">
+                    <div class="mb-4 col-sm-3">
+                        <h6 class="text-secondary">General</h6>
+                        <ul class="list-unstyled">
+                            <li><a class="footer-link mb-5" href="/">Home</a></li>
+                            <li><a class="footer-link" href="/aboutus.html">About Us</a></li>
+                            <li><a class="footer-link" href="/services.html">Services</a></li>
+                            <li><a class="footer-link" href="/contactus.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-4 col-sm-4">
+                        <h6 class="text-secondary">About Us</h6>
+                        <ul class="list-unstyled">
+                            <li><a class="footer-link" href="/aboutus.html#whoweare">Who We Are</a></li>
+                            <li><a class="footer-link" href="/aboutus.html#missionandvision">Mission and Vision</a></li>
+                            <li><a class="footer-link" href="/aboutus.html#meettheteam">Meet The Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-4 col-sm-5">
+                        <h6 class="text-secondary">Services</h6>
+                        <ul class="list-unstyled">
+                            <li><a class="footer-link" href="/ai.html">AI Solutions</a></li>
+                            <li><a class="footer-link" href="/cloud.html">Cloud Computing</a></li>
+                            <li><a class="footer-link" href="/iot.html">IoT Integrations</a></li>
+                        </ul>
+                    </div>  
+                </section>
+            </section>
+        </section>
+        <hr class="border border-success">
+        <section class="d-flex gap-2 flex-wrap justify-content-between">
+            <p>© 2024 TechSphere Innovations. All rights reserved.</p>
+            <p class="text-muted">Disclaimer: All media used on this website are for illustrative and educational purposes only.</p>
+        </section>
+    </section>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
